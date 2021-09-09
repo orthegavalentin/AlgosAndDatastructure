@@ -22,7 +22,7 @@
 
 ---
 
-### Question 4: Urify
+### Question 4: PermitionOfPalindrome
 
 #### Given a string check if it is a permutation of a palindrome string
 
