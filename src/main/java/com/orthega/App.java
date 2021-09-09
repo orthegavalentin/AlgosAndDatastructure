@@ -9,7 +9,9 @@ import java.util.Arrays;
 public class App {
     public static void main(String[] args) {
         System.out.println(checkPermutation("abcd", "cda"));
-        System.out.println(replaceSpaceWithString(" m v alenti n ", "bro"));
+        System.out.println(getValueOfChar('z'));
+        permutationOfPalindrome("merde");
+
     }
 
     /**
@@ -64,9 +66,48 @@ public class App {
 
     }
 
+    // replace empty space with String
+
     public static String replaceSpaceWithString(String word, String replacement) {
 
         return word.replaceAll("\\s+", replacement);
+    }
+
+    /**
+     * Given a word check if it is a permutation of a palindrome String
+     * 
+     * all occurences of charcters must be even except one that is odd
+     * 
+     */
+
+    public static boolean permutationOfPalindrome(String word) {
+        int oddCount = 0;
+
+        int occurences[] = new int['z' + 1 - 'a'];
+        char[] wordTemp = word.toCharArray();
+
+        for (char c : wordTemp) {
+            int index = getValueOfChar(c);
+            occurences[index]++;
+            if (occurences[index] % 2 == 0) {
+                oddCount--;
+            } else {
+                oddCount++;
+
+            }
+        }
+
+        return oddCount <= 1;
+
+    }
+
+    static int getValueOfChar(char c) {
+
+        if ('a' <= c && c <= 'z')
+            return c - 'a';
+
+        return -1;
+
     }
 
 }

@@ -45,4 +45,17 @@ public class AppTest {
         assertThat(App.replaceSpaceWithString(" mer de ", "a%")).isEqualTo("a%mera%dea%");
 
     }
+
+    @Test
+    public void shouldCheckIfStringIsPermutationOfPalindrome() {
+
+        assertThat(App.permutationOfPalindrome("aabb")).isEqualTo(true);
+        assertThat(App.permutationOfPalindrome("aab")).isEqualTo(true);
+        assertThat(App.permutationOfPalindrome("abbaacd")).isEqualTo(false);
+        assertThat(App.permutationOfPalindrome("a")).isEqualTo(true);
+        assertThat(App.permutationOfPalindrome("aabb")).isEqualTo(true);
+        assertThat(App.permutationOfPalindrome("abc")).isEqualTo(false);
+        assertThat(App.permutationOfPalindrome("")).isEqualTo(true);
+
+    }
 }

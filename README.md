@@ -14,8 +14,16 @@
 
 ---
 
-### Question 2: Urify
+### Question 3: Urify
 
 #### Given a string replace all space in the string with another given string
+
+---
+
+---
+
+### Question 4: Urify
+
+#### Given a string check if it is a permutation of a palindrome string
 
 ---
