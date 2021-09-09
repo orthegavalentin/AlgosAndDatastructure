@@ -20,7 +20,7 @@ public class AppTest {
     }
 
     @Test
-    public void shouldIfTwoStringsPermute() {
+    public void shouldTellIfTwoStringsPermute() {
 
         assertThat(App.checkPermutation("merde", "edrme")).isEqualTo(true);
         assertThat(App.checkPermutation("b", "b")).isEqualTo(true);
@@ -30,6 +30,19 @@ public class AppTest {
         assertThat(App.checkPermutation("", "")).isEqualTo(true);
         assertThat(App.checkPermutation("", "e")).isEqualTo(false);
         assertThat(App.checkPermutation("e", "")).isEqualTo(false);
+
+    }
+
+    @Test
+    public void shouldReplaceSpaceWithGivenSymbol() {
+
+        assertThat(App.replaceSpaceWithString("mer de", "a")).isEqualTo("merade");
+        assertThat(App.replaceSpaceWithString("", "a")).isEqualTo("");
+        assertThat(App.replaceSpaceWithString("mer de", "ab")).isEqualTo("merabde");
+        assertThat(App.replaceSpaceWithString("merde", "a")).isEqualTo("merde");
+        assertThat(App.replaceSpaceWithString(" mer de", "a")).isEqualTo("amerade");
+        assertThat(App.replaceSpaceWithString(" mer de ", "a")).isEqualTo("ameradea");
+        assertThat(App.replaceSpaceWithString(" mer de ", "a%")).isEqualTo("a%mera%dea%");
 
     }
 }

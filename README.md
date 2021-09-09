@@ -4,12 +4,18 @@
 
 ### Question 1: IsUnique
 
-#### :Check if string contains only unique characters
+#### Check if string contains only unique characters
 
 ---
 
 ### Question 2: check permutation
 
-#### :given two string write a methode to check if one ia permutation of the other
+#### Given two string write a methode to check if one is permutation of the other
+
+---
+
+### Question 2: Urify
+
+#### Given a string replace all space in the string with another given string
 
 ---
